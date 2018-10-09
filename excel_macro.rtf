@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
 {\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c100000;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -21,14 +21,12 @@ Excel macro for checking progression \
 \
 \
 ```\
-\
-\
 Sub progress()\
 \
 Dim ws As Worksheet\
 Dim i As Integer\
 \
-Set ws = Application.Workbooks("startingfile").Worksheets("Sheet1")\
+Set ws = Application.Workbooks("startingfile.xlsm").Worksheets("Sheet1")\
 \
 i = 2\
 \
@@ -38,30 +36,35 @@ If IsEmpty(ws.Cells(i, 6)) = False Then\
 \
 ws.Cells(i, 2) = 1\
 \
-ElseIf \cf2 \cb3 \CocoaLigature0 ISBOLD(ws.Cells(i, 7)) Or ISBOLD(ws.Cells(i, 8)) Or ISBOLD(ws.Cells(i, 9)) Or ISBOLD(ws.Cells(i, 10)) Or ISBOLD(ws.Cells(i, 11)) Or ISBOLD(ws.Cells(i, 12)) Or ISBOLD(ws.Cells(i, 13)) Or ISBOLD(ws.Cells(i, 14)) Or ISBOLD(ws.Cells(i, 15)) Or ISBOLD(ws.Cells(i, 16)) Or ISBOLD(ws.Cells(i, 17)) Or ISBOLD(ws.Cells(i, 18)) Or ISBOLD(ws.Cells(i, 19)) Or ISBOLD(ws.Cells(i, 20)) Or ISBOLD(ws.Cells(i, 21))\cf0 \cb1 \CocoaLigature1 Then\
+ElseIf ISBOLD(ws.Cells(i, 7)) Or ISBOLD(ws.Cells(i, 8)) Or ISBOLD(ws.Cells(i, 9)) Or ISBOLD(ws.Cells(i, 10)) Or ISBOLD(ws.Cells(i, 11)) Or ISBOLD(ws.Cells(i, 12)) Or ISBOLD(ws.Cells(i, 13)) Or ISBOLD(ws.Cells(i, 14)) Or ISBOLD(ws.Cells(i, 15)) Or ISBOLD(ws.Cells(i, 16)) Or ISBOLD(ws.Cells(i, 17)) Or ISBOLD(ws.Cells(i, 18)) Or ISBOLD(ws.Cells(i, 19)) Or ISBOLD(ws.Cells(i, 20)) Or ISBOLD(ws.Cells(i, 21)) Then\
 \
 ws.Cells(i, 2) = 1\
 \
-Else ws.Cells(i, 2) = 0\
+Else: ws.Cells(i, 2) = 0\
 \
-End if \
+End If\
 \
 i = i + 1\
 \
 Wend\
 \
-ws.Cells(1, 2) = SUM(B2:B16569)\
+ws.Range("B1") = WorksheetFunction.Sum(ws.Range("B2", "B7295"))\
 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 If ws.Cells(1, 2) = 1000 Then\
-MsgBox \'ab\'a0You have matched 1000 code\'a0\'bb\
+If ws.Cells(1, 2) >= 5 Then\
+MsgBox "You have matched 1000 code"\
 End If\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 \
+\
 \
 End Sub\
 \
 \
+Function ISBOLD(c As Range) As Boolean\
+If c.Font.Bold Then\
+    ISBOLD = True\
+End If\
+End Function\
+\
+```\
 \
 \
 \
