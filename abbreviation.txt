@@ -1,0 +1,18 @@
+
+
+
+- CR = Cold Rolled
+- GGC = Gate / Globe / Check (Valve)
+- GI = Galvanized Iron
+- HDPE = High Density Polyethylene
+- HIPS = High Impact Polystyrene
+- HR = Hot Rolled
+- LDPE = Low Density Polyethylene
+- LPG = Liquified Petroleum Gas
+- MS = Mild Steel
+- PP = PolyPropylene
+- TC = Tungsten Carbide
+
+
+
+
