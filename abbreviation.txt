@@ -9,10 +9,11 @@
 - HR = Hot Rolled
 - LDPE = Low Density Polyethylene
 - LPG = Liquified Petroleum Gas
+- MBT = Mercapto-Benzo-Thiazole
 - MS = Mild Steel
 - PP = PolyPropylene
 - TC = Tungsten Carbide
-
+- TDI = Toluene Di Isocyanate 
 
 
 
