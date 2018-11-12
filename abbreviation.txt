@@ -6,6 +6,7 @@
 - GI = Galvanized Iron
 - HDPE = High Density Polyethylene
 - HIPS = High Impact Polystyrene
+- HS (steel) = High speed
 - HR = Hot Rolled
 - LDPE = Low Density Polyethylene
 - LPG = Liquified Petroleum Gas
