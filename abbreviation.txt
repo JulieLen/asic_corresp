@@ -1,6 +1,6 @@
 
 
-
+- CI = Cast Iron
 - CR = Cold Rolled
 - GGC = Gate / Globe / Check (Valve)
 - GI = Galvanized Iron
